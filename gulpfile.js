@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 gulp.task('sass', function() {
 	return gulp.src('./sass/**/*.scss')
 		.pipe(sourceMaps.init())
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)) //compressed
 		.pipe(autoPrefixer({browsers: ['last 2 versions']}))
 		.pipe(sourceMaps.write('./maps'))
 		.pipe(gulp.dest('../assets/css'))
