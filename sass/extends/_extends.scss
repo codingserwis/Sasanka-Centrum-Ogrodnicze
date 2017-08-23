@@ -1,0 +1,99 @@
+// +++ Buttons +++
+%basic_button {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+	width: 100%;
+	padding: 0.5rem 1rem;
+	text-align: center;
+}
+
+%heading{
+	font-family:  $global-h-font;
+	text-transform: uppercase;
+}
+%foto_panel {
+	width: 100%;
+	min-height: 50vh;
+	padding: 8.5rem 1rem;
+		@include for_tablet_portrait {
+			min-height: 85vh;
+		}
+		@include for_tablet_landscape {
+			width: 50%;
+			min-height: 70vh;
+		}
+		@include for_desktop {
+			width: 50%;
+			height: 614px;
+		}
+}
+%text_panel {
+	width: 100%;
+	min-height: 60vh;
+	padding: 1.5rem 1rem;
+	text-align: center;
+		@include for_tablet_portrait {
+			min-height: 43vh;
+			padding: 4.5rem 5.5rem;
+		}
+		@include for_tablet_landscape {
+			width: 50%;
+			min-height: 70vh;
+			padding: 3.6rem 2rem;
+		}
+		@include for_desktop {
+			width: 50%;
+			height: 614px;
+			padding: 8.7rem 5.5rem;
+		}
+		h1 {
+			font-family:  $global-h-font;
+			font-size: 2.0rem;
+			line-height: 2.6rem;
+				@include for_tablet_portrait {
+					font-size: 3rem;
+				}
+				@include for_tablet_landscape {
+					font-size: 2.7rem;
+				}
+		}
+		p {
+			margin: 1rem 0;
+			font-size: 1rem;
+			line-height: 1.6rem;
+			font-weight: 300;
+				@include for_tablet_portrait {
+					margin: 3rem 0;
+					font-size: 1.5rem;
+					line-height: 2.1rem;
+				}
+				@include for_tablet_landscape {
+					font-size: 1.2rem;
+				}
+				@include for_xl_desktop {
+					margin: 3.5rem 2rem;
+				}
+		}
+}
+%heading_black {
+	font-family: $global-h-font;
+	color: map-get($global-font-colors, black);
+	text-align: center;
+	text-transform: uppercase;
+}
+%heading_white {
+	font-family: $global-h-font;
+	color: map-get($global-font-colors, white);
+	text-align: center;
+	text-transform: uppercase;
+}
+%top_img {
+	width: 100%;
+	height: 25vh;
+		@include for_tablet_landscape {
+			position: absolute;
+			top: -10rem;
+			z-index: -1;
+			height: 35vh;
+		}
+}

@@ -1,0 +1,557 @@
+.main_section, .main_galery_section {
+	position: relative;
+	width: 100%;
+}
+.main_container {
+	background-color: map-get($global-colors, white);
+		@include for_tablet_landscape {
+			width: 85%;
+			margin: 0 auto;
+			margin-top: 10rem;
+			padding: 1rem;
+		}
+		@include for_desktop {
+			width: 65%;
+		}
+}
+.container {
+	width: 100%;
+	padding: 1.5rem 0.5rem;
+	background-color: white;
+	color: map-get($global-font-colors, font-black);
+		h4 {
+			@extend %heading;
+			margin: 1rem 0;
+			padding: 1rem;
+			font-size: 1rem;
+			line-height: 1.5rem;
+			background-color: map-get($global-colors, green);
+			color: white;
+				@include for_xl_desktop {
+					padding: 1.2rem;
+					font-size: 2rem;
+					line-height: 2.5rem;
+				}
+		}
+}
+.container_header {
+	@extend %heading_black;
+	font-size: 1.5rem;
+	line-height: 2.1rem;
+		@include for_tablet_portrait {
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+		}
+		@include for_xl_desktop {
+			font-size: 3rem;
+			line-height: 3.5rem;
+			text-transform: uppercase;
+		}
+}
+.container_content {
+	margin-top: 1.5rem;
+	font-size: 1.0rem;
+	line-height: 1.6rem;
+		@include for_xl_desktop {
+			margin-top: 2.5rem;
+			font-size: 1.3rem;
+			line-height: 1.9rem;
+			text-align: justify;
+		}
+}
+.service_heading {
+	@extend %heading_white;
+	color: map-get($global-font-colors, font-white);
+	padding: 0.9rem 0;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	background: map-get($global-colors, green);
+		@include for_xl_desktop {
+			font-size: 2rem;
+			line-height: 2.6rem;
+			padding: 0.9rem;
+		}
+}
+.servis_list {
+	margin-top: 1rem;
+	padding-left: 2rem;
+	text-align: left;
+	list-style-type: disc;
+	margin-bottom: 1rem;
+		li {
+			padding: 0.5rem;
+			font-size: 1.1rem;
+			@include for_xl_desktop {
+				transition: all 0.3s ease;
+				&:hover {
+				background-color: map-get($global-colors, green);
+				color: map-get($global-font-colors, font-white);
+				}
+			}
+		}
+}
+// +++ +++ +++ PHOTO GALERY +++ +++ +++
+.main_galery_container {
+	width: 100%;
+	background-color: map-get($global-colors, white);
+		@include for_tablet_landscape {
+			width: 85%;
+			margin: 0 auto;
+			margin-top: 10rem;
+			padding: 1rem;
+		}
+		@include for_desktop {
+			width: 65%;
+		}
+
+}
+.top_img_main_gallery {
+	@extend %top_img;
+	background: url('../img/galery_bcg_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+		@include for_tablet_landscape {
+			background: url('../img/galery_bcg_m.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		@include for_desktop {
+			background: url('../img/galery_bcg_l.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+}
+.photo_container {
+	width: 100%;
+	padding-top: 1rem;
+		h2 {
+			@extend %heading_black;
+			font-size: 1.9rem;
+			line-height: 2.5rem;
+			color: map-get($global-font-colors, font-black);
+				@include for_tablet_landscape {
+					font-size: 2.5rem;
+					line-height: 3.1rem;
+				}
+		}
+		h3 {
+			@extend %heading_white;
+			margin: 0.9rem 0;
+			padding: 0.9rem;
+			font-size: 1.5rem;
+			line-height: 2.1rem;
+			background: map-get($global-colors, green);
+				@include for_tablet_landscape {
+					font-size: 1.9rem;
+					line-height: 2.5rem;
+				}
+		}
+}
+// +++ +++ +++ PAGINATION FOR OPINIONS +++ +++ +++
+.op_pagination {
+	width: 100%;
+	min-height: 2rem;
+	padding: 0.5rem;
+	text-align: center;
+		i {
+			cursor: pointer;
+			margin: 0 0.5rem;
+		}
+}
+.pink_section {
+	width: 100%;
+	background-color: map-get($global-colors, pink);
+	.container {
+		margin-top: 0;
+		background-color: transparent;
+		color: map-get($global-font-colors, font-white);
+		padding: 1rem 0.5rem;
+			@include for_xl_desktop {
+				margin-top: 1rem;
+			}
+	}
+}
+.opinions {
+	display: none;
+	@include for_tablet_landscape {
+	display: block;
+	width: 100%;
+	background-color: map-get($global-colors, pink);
+	.container {
+		margin-top: 0;
+		background-color: transparent;
+		color: map-get($global-font-colors, font-white);
+		padding: 1rem 0.5rem;
+			@include for_xl_desktop {
+				margin-top: 1rem;
+			}
+	}
+	}
+}
+.more .container {
+	padding: 0.5rem;
+	@include for_xl_desktop {
+		padding: 0;
+	}
+}
+.marketing_heading {
+	@extend %heading_white;
+	color: map-get($global-font-colors, font-white);
+	background-color: map-get($global-colors, pink);
+	margin: 1.5rem 0;
+	padding: 1rem 0.25rem;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+		@include for_xl_desktop {
+			font-size: 2.1rem;
+			line-height: 2.7rem;
+			padding: 1.5rem 0;
+		}
+}
+.top_img_main_gardens {
+	@extend %top_img;
+	background: url('../img/gardens_bcg_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+		@include for_tablet_landscape {
+			background: url('../img/gardens_bcg_m.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		@include for_desktop {
+			background: url('../img/gardens_bcg_l.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+}
+.top_img_servis {
+	@extend %top_img;
+	background: url('../img/servis_bcg_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include for_tablet_landscape {
+			background: url('../img/servis_bcg_m.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		@include for_desktop {
+			background: url('../img/servis_bcg_l.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+}
+.top_img_single {
+	@extend %top_img;
+	overflow: hidden;
+}
+.top_img_making {
+	@extend %top_img;
+	background: url('../img/making_bcg_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include for_tablet_landscape {
+			background: url('../img/making_bcg_m.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	@include for_desktop {
+			background: url('../img/making_bcg_l.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+}
+.top_img_shoping {
+	@extend %top_img;
+	background: url('../img/shoping_bcg_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include for_tablet_landscape {
+			background: url('../img/shoping_bcg_m.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	@include for_desktop {
+			background: url('../img/shoping_bcg_l.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+}
+.top_img_plant_pr {
+	@extend %top_img;
+	background: url('../img/plant_prot_bcg_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include for_tablet_landscape {
+			background: url('../img/plant_prot_bcg_m.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	@include for_desktop {
+			background: url('../img/plant_prot_bcg_l.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+}
+.top_img_organic_sudstr {
+	@extend %top_img;
+	background: url('../img/organic_substr_bcg_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include for_tablet_landscape {
+			background: url('../img/organic_substr_bcg_m.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	@include for_desktop {
+			background: url('../img/organic_substr_bcg_l.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+}
+.top_img_fertelizers {
+	@extend %top_img;
+	background: url('../img/fertilizers_bcg_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include for_tablet_landscape {
+			background: url('../img/fertilizers_bcg_m.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	@include for_desktop {
+			background: url('../img/fertilizers_bcg_l.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+}
+.top_img_stone {
+	@extend %top_img;
+	background: url('../img/stone_bcg_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include for_tablet_landscape {
+			background: url('../img/stone_bcg_m.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	@include for_desktop {
+			background: url('../img/stone_bcg_l.jpg') no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+}
+.top_img_error {
+	width: 100%;
+	height: 25vh;
+		@include for_tablet_landscape {
+			position: absolute;
+			top: -10rem;
+			z-index: -1;
+			height: 85vh;
+			background-image: url('../img/404_bcg_l.jpg');
+			background-position: center;
+			background-size: cover;
+		}
+}
+.top_img {
+	width: 100%;
+	height: 25vh;
+	background: url('../img/garden_top.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+		@include for_xl_desktop {
+			height: 30vh;
+		}
+}
+.opinion_box {
+	font-size: 1.1rem;
+	line-height: 1.6rem;
+	text-align: center;
+	overflow: hidden;
+		@include for_xl_desktop {
+			
+			padding: 0.5rem;
+		}
+	blockquote {
+		font-style: italic;
+		padding: 1rem 0.5rem;
+		text-align: left;
+			@include for_tablet_landscape {
+				width: 65%;
+				float: left;
+			}
+		span {
+			display: inline-block;
+			float: right;
+			margin: 2.5rem 0 1.5rem;
+			@include for_tablet_landscape {
+				margin: 2.5rem 0 0.5rem;
+			}
+		}
+	}
+}
+.opinion_box_carousel {
+	position: relative;
+	width: 9999px;
+	min-height: 670px;
+	overflow: hidden;
+		@include for-tablet-landscape {
+			min-height: 255px;
+		}
+		li {
+			display: inline-block;
+			float: left;
+			width: 30rem;
+			margin-right: 13px;
+				@include for-tablet-landscape {
+					width: 862px;
+					margin-right: 10px;
+				}
+
+		}
+}
+.op_header {
+	@include for_tablet_landscape {
+		float: left;
+		width: 35%;
+		margin: 1rem 0;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		border: 4px solid map-get($global-colors, white);
+	}
+}
+.s_box {
+	position: relative;
+	min-height: 65vh;
+	padding: 1rem 0.5rem;
+	border: 1px solid rgba(map-get($global-colors, green), 0.5);
+	margin-top: 1.5rem;
+	text-align: center;
+		@include for_phone_landscape {
+			min-height: 325px;
+		}
+		@include for_tablet_portrait {
+			float: left;
+			width: 49%;
+			min-height: 35vh;
+		}
+		@include for_tablet_landscape {
+			float: left;
+			width: 31.8%;
+			padding: 1.5rem 1rem;
+			min-height: 450px;
+			transition: all 0.3s ease;
+		&:hover {
+				background-color: map-get($global-colors, green);
+					h3 {
+						color: map-get($global-font-colors, font-white);
+					}
+					p {
+						color: map-get($global-font-colors, font-white);
+					}
+					.more_btn {
+						border: 2px solid map-get($global-colors, white);
+						color: white;
+						transition: all 0.3s ease;
+						&:hover {
+							background-color: white;
+							color: map-get($global-font-colors, font-green);
+						}
+					}
+			}
+		}
+		@include for_xl_desktop {
+			width: 32.1%;
+			min-height: 520px;
+		}
+	img {
+		width: 5rem;
+		height: auto;
+	}
+	h3 {
+		margin-top: 1rem;
+		font-size: 1.5rem;
+		color: map-get($global-font-colors, font-black);
+		text-transform: uppercase;
+			@include for_tablet_landscape {
+				min-height: 4rem;
+			}
+			@include for_xl_desktop {
+				font-size: 1.5rem;
+				line-height: 2.234rem;
+			}
+	}
+	p {
+		margin-top: 1rem;
+		color: map-get($global-font-colors, font-black);
+			@include for_xl_desktop {
+				margin-top: 2rem;
+				text-align: center;
+				font-size: 1.2rem;
+				line-height: 1.8rem;
+			}
+	}
+}
+.link_box {
+	display: block;
+	@include for_tablet_landscape {
+		transition: all 0.3s ease;
+	}
+}
+.g_box {
+	position: relative;
+	min-height: 45vh;
+	padding: 1rem 0.5rem;
+	border: 1px solid rgba(map-get($global-colors, green), 0.5);
+	margin-top: 1.5rem;
+	text-align: center;
+		@include for_tablet_landscape {
+			float: left;
+			width: 49%;
+			padding: 1.5rem 1.5rem;
+			min-height: 30rem;
+			transition: all 0.3s ease;
+			&:nth-child(2), &:nth-child(3) {
+				margin-left: 1rem;
+			}
+			&:hover {
+				background-color: map-get($global-colors, green);
+				h3 {
+					color: map-get($global-font-colors, font-white);
+				}
+				p {
+					color: map-get($global-font-colors, font-white);
+				}
+			}
+		}
+		h2 {
+			font-size: 4rem;
+			line-height: 4.5rem;
+			color: map-get($global-font-colors, font-pink);
+		}
+		h3 {
+			margin-top: 1.5rem;
+			font-size: 1.9rem;
+			text-transform: uppercase;
+			transition: all 0.3s ease;
+		}
+		p {	
+			margin-top: 1.7rem;
+			font-size: 1.2rem;
+			text-align: center;
+			transition: all 0.3s ease;
+		}
+}
+.error_container_header {
+	@extend %heading_black;
+	font-size: 8rem;
+	line-height: 7.5rem;
+	color: map-get($global-font-colors, font-pink);
+}
+.error_container_content {
+	text-align: center;
+	font-size: 3rem;
+	line-height: 8rem;
+}
