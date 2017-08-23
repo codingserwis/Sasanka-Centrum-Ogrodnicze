@@ -1,0 +1,21 @@
+@include my_animation(to-top) {
+	0% {
+		opacity: 0;
+		transform: translateY(150px);
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		visibility: visible;
+	}
+}
+.to_animate {
+	visibility: hidden;
+}
+.animate {
+	animation-name: to-top;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	visibility: visible;
+}

@@ -1,0 +1,32 @@
+.post_bcg_img {
+	width: 100%;
+	height: auto;
+}
+.post_content {
+	margin-top: 1.5rem;
+	font-size: 1.0rem;
+	line-height: 1.6rem;
+		@include for_xl_desktop {
+			margin-top: 2.5rem;
+			font-size: 1.3rem;
+			line-height: 1.9rem;
+			text-align: justify;
+		}
+	h1 {
+		margin: 0.5rem;
+		padding: 0.5rem;
+		background-color: map-get($global-colors, green);
+		font-size: 1.5rem;
+		line-height: 2.1rem;
+		color: map-get($global-font-colors, font-white);
+		
+	}
+	ul {
+		margin-top: 1rem;
+		padding-left: 3rem;
+		list-style: disc;
+			li {
+				margin: 0.5rem 0;
+			}
+	}
+}

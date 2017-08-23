@@ -1,0 +1,41 @@
+// +++ RWD +++
+@mixin for_phone_only {
+	@media (min-width: map-get($global-resolution, phone)) {
+		@content;
+	}
+}
+@mixin for_phone_landscape {
+	@media (max-width: map-get($global-resolution, phone)) and (orientation: landscape) {
+		@content;
+	}
+}
+@mixin for_tablet_portrait {
+	@media (min-width: map-get($global-resolution, tablet-portrait)) {
+		@content;
+	}
+}
+@mixin for_tablet_landscape {
+	@media (min-width: map-get($global-resolution, tablet-landscape)) {
+		@content;
+	}
+}
+@mixin for_desktop {
+	@media (min-width: map-get($global-resolution, desktop)) {
+		@content;
+	}
+}
+@mixin for_xl_desktop {
+	@media (min-width: map-get($global-resolution, xl)) {
+		@content;
+	}
+}
+
+// +++ Animation +++
+@mixin my_animation ($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
