@@ -62,3 +62,18 @@ a {
 	opacity: 1;
 	display: block;
 }
+.social__block {
+	position: fixed;
+	top: 25%;
+	right: 0;
+}
+.social__block-fb {
+	width: 50px;
+	height: 50px;
+	background-color: map-get($global-colors, fb-blue);
+		a {
+			display: block;
+			padding: 10px;
+			text-align: center;
+		}
+}
