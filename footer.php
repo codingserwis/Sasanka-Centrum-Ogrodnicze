@@ -23,6 +23,13 @@
 				</div>
 				<?php wp_footer();?>
 		</footer>
+		<div class="social__block">
+			<div class="social__block-fb">
+				<a href="https://www.facebook.com/Centrum-Ogrodnicze-Sasanka-509559705729173/">
+					<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
 		<div class="scroll_to_top">
 			<a href="#top">
 				<i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i>
