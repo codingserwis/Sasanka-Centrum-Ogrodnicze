@@ -1,0 +1,380 @@
+/**
+ * +++ Main content +++
+ */
+ .header, .footer, .news, .gardens, .shoping, .servis, .my_slider {
+	width: 100%;
+}
+.header, .footer {
+	background-color: map-get($global-colors, pink);
+}
+// +++ Header +++
+.header {
+	height: 35px;
+	min-height: 35px;
+		@include for_tablet_landscape {
+			position: relative;
+			height: 158px;
+			min-height: 158px;
+		}
+}
+.top_logo {
+	display: none;
+		@include for_tablet_landscape {
+			display: block;
+			width: 50%;
+			margin: 0 auto;
+			text-align: center;
+			img {
+				width: 15rem;
+				height: auto;
+			}
+		}
+}
+.small_logo {
+	img {
+		width: 10rem;
+	}
+}
+.fast_contact {
+	text-align: center;
+	padding: 0.5rem 0;
+		li {
+			width: 49%;
+			font-size: 0.9rem;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+		@include for_tablet_landscape {
+			display: none;
+		}
+}
+// +++ Navigation +++
+.main_nav {
+	display: none;
+	@include for_tablet_landscape {
+		text-align: center;
+		background-color: map-get($global-colors, pink);
+		display: block;
+		width: 100%;
+		padding: 1rem 1rem;
+	}
+
+	ul {
+		width: 100%;
+		margin: 0 auto;
+		li {
+			position: relative;
+			display: inline-block;
+			a {
+				display: block;
+				padding: 0.5rem 1rem;
+				text-align: center;
+				font-family:  $global-h-font;
+				font-size: 1.1rem;
+				letter-spacing: 0.2rem;
+				text-transform: uppercase;
+				transition: all 0.3s ease;
+			}
+			&:hover a {
+					background-color: map-get($global-colors, white);
+					color: map-get($global-font-colors, font-pink);
+				}
+			&:hover .sub-menu {
+					display: block;
+				}
+		}
+	}
+	.sub-menu {
+		display: none;
+		position: absolute;
+		z-index: 100;
+		width: 15rem;
+		padding: 0;
+		li {
+			border-top: 2px solid map-get($global-colors, pink);
+			a {
+				display: block;
+				min-width: 15.05rem;
+				padding: 0.5rem 1.5rem;
+				background-color: white;
+				font-size: 1rem;
+				color: map-get($global-font-colors, font-pink);
+				text-align: center;
+				transition: all 0.3s ease;
+				&:hover {
+					background-color: map-get($global-colors, pink);
+					color: white;
+				}
+			}
+		}
+	}
+}
+.current-menu-item {
+	background-color: map-get($global-colors, white);
+		a {
+			color: map-get($global-font-colors, font-pink);
+		}
+}
+.fixed {
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+}
+// +++ Slider +++
+.custom_slider ol li a {
+    background-color: map-get($global-colors, gray);
+        &:hover {
+            background-color: map-get($global-colors, green);
+        }
+  }
+  .custom_slider ol li a.flex-active {
+    background-color: map-get($global-colors, green);
+  }
+  // +++ News +++
+.news {
+	@include for_xl_desktop {
+		padding: 2.5rem 1.5rem;
+	}
+}
+.news_box {
+	width: 100%;
+	min-height: 680px;
+	margin-bottom: 1.2rem;
+	color: map-get($global-font-colors, font-lack);
+	background-color: map-get($global-colors, white);
+		a {
+			color: inherit;
+		}
+		@include for_phone_landscape {
+			min-height: 720px;
+		}
+		@include for_tablet_landscape {
+			width: 32.1%;
+			float: left;
+			&:nth-child(2) {
+				margin: 0 1rem;
+			}
+		}
+		@include for_xl_desktop {
+			float: left;
+			width: 31.78%;
+			min-height: 46rem;
+				&:nth-child(2) {
+					margin: 0 2rem;
+				}
+		}
+}
+.news_box_img {
+	overflow: hidden;
+	margin-bottom: 1.5rem;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+}
+.news_box_title {
+	font-family:  $global-h-font;
+	text-transform: uppercase;
+	padding-left: 1rem;
+	text-align: left;
+	font-size: 1.9rem;
+	line-height: 2.5rem;
+		@include for_xl_desktop {
+			padding-left: 1.5rem;
+			text-align: left;
+			font-size: 2rem;
+			line-height: 2.6rem;
+		}
+}
+.news_box_content {
+	padding: 0 1rem;
+	margin-top: 1rem;
+		p {
+			position: relative;
+			min-height: 380px;
+			line-height: 1.6rem;
+			color: map-get($global-font-colors, font-black);
+				@include for_phone_landscape {
+					min-height: 280px;
+				}
+				@include for_tablet_portrait {
+					min-height: 230px;
+				}
+				@include for_tablet_landscape {
+					min-height: 400px;
+				}
+				@include for_desktop {
+					min-height: 350px;
+				}
+		}
+		a {
+			@extend %basic_button;
+			position: absolute;
+			left: 0;
+			bottom: 1rem;
+			border: 2px solid map-get($global-colors, green);
+			color: map-get($global-colors, green);
+			margin-top: 2rem;
+				@include for_tablet_landscape {
+					transition: all 0.3s ease;
+				}
+		}
+		@include for_xl_desktop {
+			padding: 0 1.5rem;
+			margin-top: 1.5rem;
+			font-size: 1.1rem;
+			line-height: 1.9rem;
+		}
+}
+// +++ Pagination for news +++
+.main_pagination {
+	width: 100%;
+	min-height: 2rem;
+	margin-bottom: 1.5rem;
+	padding: 0.5rem;
+	nav {
+			text-align: center;
+		}
+	@include for_xl_desktop {
+	width: 32%;
+	margin: 0 auto;
+	color: map-get($global-font-colors, font-black);
+		
+	}
+}
+.page-numbers {
+	margin-top: 1rem;
+	font-size: 1rem;
+	padding: 0.25rem 0.5rem;
+	color: map-get($global-font-colors, font-pink);
+		transition: all 0.3s ease;
+			&:hover {
+				background-color: map-get($global-colors, pink);
+				color: map-get($global-font-colors, font-white);
+			}
+}
+.current {
+	background-color: map-get($global-colors, pink);
+	padding: 0.25rem 0.5rem;
+	color: map-get($global-font-colors, font-white);
+}
+// +++ Pink and green square +++
+.text_panel_pink {
+	@extend %text_panel;
+	background-color: rgba(map-get($global-colors, pink), 0.8);
+}
+.text_panel_green {
+	@extend %text_panel;
+	background-color: rgba(map-get($global-colors, green), 0.8);
+}
+// +++ Panel for buttons in pink and green squares +++
+.link_panel {
+	width: 100%;
+	margin-top: 3.5rem;
+	@include for_tablet_portrait {
+		margin: 0;
+	}
+	@include for_xl_desktop {
+		width: 100%;
+		position: static;
+	}
+}
+.adress_desc {
+	@include for_tablet_landscape {
+		float: right;
+		padding-top: 5rem;
+	}
+}
+// +++ Foto panels +++
+.foto_panel_gardens {
+	@extend %foto_panel;
+	background: url('../img/main_page_1_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+		@include for_tablet_landscape {
+			float: right;
+		}
+}
+.foto_panel_shopping {
+	@extend %foto_panel;
+	background: url('../img/main_page_2_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+		@include for_tablet_landscape {
+			float: left;
+		}
+}
+.foto_panel_servis {
+	@extend %foto_panel;
+	background: url('../img/main_page_3_s.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+		@include for_tablet_landscape {
+			float: right;
+		}
+}
+.map_panel {
+	padding: 0;
+	@extend %foto_panel;
+	min-height: 108vh;
+		@include for_phone_landscape {
+			min-height: 192vh;
+		}
+		@include for_tablet_portrait {
+			min-height: 60vh;
+		}
+		@include for_tablet_landscape {
+			float: left;
+		}
+}
+// +++ Address +++
+.adress_heading {
+	font-family: $global-h-font;
+	font-size: 1.700rem;
+	line-height: 2.2rem;
+}
+.main_adress {
+	margin-top: 3rem;
+	font-style: normal;
+}
+.adress_info {
+	margin: 0.75rem 0;
+	font-size: 1.4rem;
+	font-weight: 300;
+		li {
+			margin: 0.25rem 0;
+			font-weight: 300;
+		}
+}
+// +++ Footer +++
+.footer {
+	padding: 0.5rem 0 1rem 0;
+	text-align: center;
+}
+.footer_info {
+	padding: 0.5rem 0;
+	p {
+		margin: 0.5rem 0;
+		font-size: 0.7rem;
+	}
+}
+.footer_nav {
+	padding: 1.5rem 0;
+	li {
+		display: inline-block;
+			a {
+				padding: 0.5rem 1rem;
+				font-family:  $global-h-font;
+				text-transform: uppercase;
+				letter-spacing: 0.2rem;
+				transition: all 0.3s ease;
+					&:hover {
+						background-color: map-get($global-colors, white);
+						color: map-get($global-font-colors, font-pink);
+					}
+			}
+	}
+	.current-menu-item {
+		padding: 0.5rem 0;
+	}
+}

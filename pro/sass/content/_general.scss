@@ -1,0 +1,79 @@
+html {
+    box-sizing: border-box;
+    font-family: $global-font-family;
+    font-size: $global-font-size;
+    color: map-get($global-font-colors, font-white);
+}
+body {
+	background-color: rgba(map-get($global-colors, gray), 0.3);
+}
+a {
+	text-decoration: none;
+	color: map-get($global-font-colors, font-white);
+}
+.row {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+.no_float {
+	float: none;
+}
+.to_left {
+	float: left;
+}
+.to_right {
+	float:right;
+}
+.margin_right {
+	@include for_tablet_portrait {
+		margin-right: 1%;
+	}
+	@include for_tablet_landscape {
+		margin-right: 0;
+	}
+}
+.margin_left_right {
+	@include for_tablet_landscape {
+		margin: 1.5rem 1rem 0 1rem;
+	}
+}
+.scroll_to_top {
+	opacity: 0;
+	display: none;
+	position: fixed;
+	right: 5%;
+	bottom: 7%;
+	z-index: 10;
+	width: 40px;
+	height: 40px;
+	background-color: map-get($global-colors, pink);
+	border: 1px solid map-get($global-colors, gray);
+		a {
+			display: inline-block;
+			padding: 0.15rem 0.25rem 0;
+		}
+}
+.show_to_top {
+	opacity: 1;
+	display: block;
+}
+.social__block {
+	position: fixed;
+	top: 25%;
+	right: 0;
+}
+.social__block-fb {
+	width: 50px;
+	height: 50px;
+	background-color: map-get($global-colors, fb-blue);
+		a {
+			display: block;
+			padding: 10px;
+			text-align: center;
+		}
+}

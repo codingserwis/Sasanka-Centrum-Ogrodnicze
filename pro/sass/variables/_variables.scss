@@ -1,0 +1,35 @@
+/**
+ * +++ +++ Variables for Sasanka +++ +++
+ */
+ // +++ Typography +++
+ $global-font-family: 'Roboto', sans-serif;
+ $global-h-font: 'Oswald', sans-serif;
+ $global-h-font-weight: 700;
+ $global-font-weight: 100;
+ $global-font-size: 16px;
+
+ // +++ Font colors +++ 
+ $global-font-colors: (
+	font-white: #fff,
+	font-black: #191919,
+	font-pink: #df147b,
+	font-green: #019200
+);
+
+// +++ Colors +++
+$global-colors: (
+	white: #fff,
+	pink: #df147b,
+	green: #019200,
+	gray: #CCCCCC,
+	fb-blue: #3b5998
+);
+
+// +++ Resolutions +++
+$global-resolution: (
+	phone: 599px, 
+	tablet-portrait: 600px,
+	tablet-landscape: 900px,
+	desktop: 1200px,
+	xl: 1440px
+);
