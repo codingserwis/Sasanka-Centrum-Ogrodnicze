@@ -35,15 +35,25 @@ gulp.task('uncss', function() {
 		.pipe(browserSync.stream());
 });
 
-// copying files and uglify js 
-gulp.task('copy', function() {
+// copying php files
+gulp.task('php-copy', function() {
 	return gulp.src('./**/*.php')
 	//	.pipe(gulpif('*.js', sourceMaps.init()))
 	//	.pipe(gulpif('*.js', babel({presets: ['es2015']})))
 	//	.pipe(gulpif('*.js', uglify()))
 	//	.pipe(gulpif('*.js', sourceMaps.write('.')))
-	//	.pipe(gulpif('*.js', gulp.dest('../assets/')))
 		.pipe(gulpif('*.php', gulp.dest('../')))
+		.pipe(browserSync.stream());
+});
+
+// copying js files 
+gulp.task('js-copy', function() {
+	return gulp.src('./js/*.js')
+	//	.pipe(gulpif('*.js', sourceMaps.init()))
+	//	.pipe(gulpif('*.js', babel({presets: ['es2015']})))
+		.pipe(uglify())
+	//	.pipe(gulpif('*.js', sourceMaps.write('.')))
+		.pipe(gulp.dest('../assets/js/'))
 		.pipe(browserSync.stream());
 });
 
@@ -64,7 +74,8 @@ gulp.task('browser-sync', function() {
 // watch for files
 gulp.task('watch', ['browser-sync', 'sass'], function() {
 	gulp.watch('./sass/**/*.scss', ['sass']);
-	gulp.watch('./**/*.php', ['copy']);
+	gulp.watch('./**/*.php', ['php-copy']);
+	gulp.watch('./js/*.js', ['js-copy']);
 });
 
 // gulp default task

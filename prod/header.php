@@ -7,8 +7,6 @@
 		<meta name="keywords" content="Sasanka, Sasanka Opole, Centrum Ogrodnicze, Centrum Ogrodnicze Opole, Sklep, Usługi ogrodnicze, Usługi ogrodnicze Opole, Usługi Ogrodncze opolskie, Zakładanie ogrodów, Projektowanie ogrodoów, Pielęgnacja ogrodów, Sklep ogrodniczy, Sklep ogrodniczy opole, Środki ochrony roślin, Systemy nawadniania, Opole, opolskie, Opolszczyzna">
 		<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto:100,300&amp;subset=latin-ext" rel="stylesheet">
 		<script src="https://use.fontawesome.com/b1f95d1c43.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_directory');?>/assets/js/app.js"></script>
 		<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -25,7 +23,6 @@
 		<link rel="manifest" href="<?php bloginfo('template_directory');?>/manifest.json">
 		<link rel="mask-icon" href="<?php bloginfo('template_directory');?>/safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/main.css">
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
 	</head>

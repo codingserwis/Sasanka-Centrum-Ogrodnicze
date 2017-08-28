@@ -213,11 +213,15 @@
 			left: 0;
 			bottom: 1rem;
 			border: 2px solid map-get($global-colors, green);
-			color: map-get($global-colors, green);
+			color: map-get($global-font-colors, font-green);
 			margin-top: 2rem;
 				@include for_tablet_landscape {
 					transition: all 0.3s ease;
 				}
+			&:hover {
+				color: map-get($global-font-colors, font-white);
+				background-color: map-get($global-colors, green);
+			}
 		}
 		@include for_xl_desktop {
 			padding: 0 1.5rem;
