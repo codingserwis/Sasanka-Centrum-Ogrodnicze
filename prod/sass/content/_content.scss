@@ -142,9 +142,6 @@
 	margin-bottom: 1.2rem;
 	color: map-get($global-font-colors, font-lack);
 	background-color: map-get($global-colors, white);
-		a {
-			color: inherit;
-		}
 		@include for_phone_landscape {
 			min-height: 720px;
 		}
@@ -163,6 +160,24 @@
 					margin: 0 2rem;
 				}
 		}
+
+	.news_box_title {
+		font-family:  $global-h-font;
+		text-transform: uppercase;
+		padding-left: 1rem;
+		text-align: left;
+		font-size: 1.9rem;
+		line-height: 2.5rem;
+			@include for_xl_desktop {
+				padding-left: 1.5rem;
+				text-align: left;
+				font-size: 2rem;
+				line-height: 2.6rem;
+			}
+			a {
+				color: map-get($global-font-colors, font-black);
+			}
+	}
 }
 .news_box_img {
 	overflow: hidden;
@@ -172,20 +187,7 @@
 			height: auto;
 		}
 }
-.news_box_title {
-	font-family:  $global-h-font;
-	text-transform: uppercase;
-	padding-left: 1rem;
-	text-align: left;
-	font-size: 1.9rem;
-	line-height: 2.5rem;
-		@include for_xl_desktop {
-			padding-left: 1.5rem;
-			text-align: left;
-			font-size: 2rem;
-			line-height: 2.6rem;
-		}
-}
+
 .news_box_content {
 	padding: 0 1rem;
 	margin-top: 1rem;

@@ -532,6 +532,7 @@
 			color: map-get($global-font-colors, font-pink);
 		}
 		h3 {
+			min-height: 70px;
 			margin-top: 1.5rem;
 			font-size: 1.9rem;
 			text-transform: uppercase;

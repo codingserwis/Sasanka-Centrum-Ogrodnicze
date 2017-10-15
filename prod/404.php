@@ -17,7 +17,7 @@
 		<section class="back">
 			<div class="row">
 				<div class="container">
-					<a href="http://localhost/sasanka/" class="back_btn">Strona główna</a>
+					<a href="<?php bloginfo('url') ?>" class="back_btn">Strona główna</a>
 				</div>
 			</div>
 		</section>

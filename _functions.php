@@ -3,13 +3,8 @@
  * +++ +++ +++ ENQUEUE STYLES AND SCRIPTS+++ +++ +++
  */
 	function addThemeStylesAndScripts() {
-		$styleVer = filemtime(get_template_directory() . '/assets/css/main.css');
-		$scriptVer = filemtime(get_template_directory() . '/assets/js/app.js');
-		
-		wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', array(), $styleVer, 'all');
-		wp_enqueue_style('fonts','https://fonts.googleapis.com/css?family=Oswald|Roboto:100,300&amp;subset=latin-ext', array(), null);
-		wp_enqueue_script( 'fa', 'https://use.fontawesome.com/b1f95d1c43.js', array(), null, false );
-		wp_enqueue_script('app', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), $scriptVer, true);
+		wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0', 'all');
+		wp_enqueue_script('app', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), '1.0', true);
 	}
 
 	add_action('wp_enqueue_scripts', 'addThemeStylesAndScripts');
