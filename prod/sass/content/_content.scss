@@ -38,15 +38,19 @@
 .fast_contact {
 	text-align: center;
 	padding: 0.5rem 0;
+	@include for_tablet_landscape {
+		display: none;
+	}
+	ul {
+		margin: 0 auto;
+		padding: 0;
 		li {
 			width: 49%;
 			font-size: 0.9rem;
 			display: inline-block;
 			text-transform: uppercase;
 		}
-		@include for_tablet_landscape {
-			display: none;
-		}
+	}
 }
 // +++ Navigation +++
 .main_nav {
@@ -162,21 +166,27 @@
 		}
 
 	.news_box_title {
+		min-height: 85px;
 		font-family:  $global-h-font;
 		text-transform: uppercase;
 		padding-left: 1rem;
 		text-align: left;
 		font-size: 1.9rem;
 		line-height: 2.5rem;
-			@include for_xl_desktop {
-				padding-left: 1.5rem;
-				text-align: left;
-				font-size: 2rem;
-				line-height: 2.6rem;
+		@include for_xl_desktop {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+			text-align: left;
+			font-size: 2rem;
+			line-height: 2.6rem;
+		}
+		a {
+			color: map-get($global-font-colors, font-black);
+			transition: color .3s ease-in-out;
+			&:hover {
+				color: map-get($global-font-colors, font-green);
 			}
-			a {
-				color: map-get($global-font-colors, font-black);
-			}
+		}
 	}
 }
 .news_box_img {
