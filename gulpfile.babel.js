@@ -155,7 +155,7 @@ gulp.task('watch', ['sass', 'browser-sync'], () => {
 });
 
 gulp.task('start-dev', () => {
-	runSequence('clear', 'dependences', 'php', 'sass', 'js', 'watch');
+	runSequence('clear', 'dependences', 'php', 'sass', 'js', 'img', 'watch');
 });
 
 // gulp for production

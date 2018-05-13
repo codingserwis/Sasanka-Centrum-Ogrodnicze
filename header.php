@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="<?php bloginfo('language'); ?>">
+<html lang="<?php bloginfo( 'language' ); ?>">
 	<head>
-		<meta charset="<?php bloginfo('charset'); ?>">
-		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<meta charset="<?php bloginfo( 'charset' ); ?>">
+		<meta name="description" content="<?php bloginfo( 'description' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="keywords" content="Sasanka, Sasanka Opole, Centrum Ogrodnicze, Centrum Ogrodnicze Opole, Sklep, Usługi ogrodnicze, Usługi ogrodnicze Opole, Usługi Ogrodncze opolskie, Zakładanie ogrodów, Projektowanie ogrodoów, Pielęgnacja ogrodów, Sklep ogrodniczy, Sklep ogrodniczy opole, Środki ochrony roślin, Systemy nawadniania, Opole, opolskie, Opolszczyzna">
-		<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto:100,300&amp;subset=latin-ext" rel="stylesheet">
 		<script src="https://use.fontawesome.com/b1f95d1c43.js"></script>
 		<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -17,11 +16,12 @@
   ga('send', 'pageview');
 
 </script>
-		<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_directory');?>/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_directory');?>/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_directory');?>/favicon-16x16.png">
-		<link rel="manifest" href="<?php bloginfo('template_directory');?>/manifest.json">
-		<link rel="mask-icon" href="<?php bloginfo('template_directory');?>/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/assets/img/favicons/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/favicons/apple-touch-icon.png' );?>">
+		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/favicons/favicon-32x32.png' );?>">
+		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/favicons/favicon-16x16.png' );?>">
+		<link rel="manifest" href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/favicons/manifest.json' );?>">
+		<link rel="mask-icon" href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/favicons/safari-pinned-tab.svg' );?>" color="#5bbad5">
 		<meta name="theme-color" content="#ffffff">
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
@@ -30,8 +30,8 @@
 		<header class="header">
 			<div class="row">
 				<div class="top_logo">
-					<a href="<?php bloginfo('url'); ?>">
-						<img src="<?php bloginfo('template_directory')?>/assets/img/sasanka_white_logo.svg">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/sasanka_white_logo.svg' );?>">
 					</a>
 				</div>
 				<div class="fast_contact">

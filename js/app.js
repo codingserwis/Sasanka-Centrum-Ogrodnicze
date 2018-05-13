@@ -61,5 +61,5 @@ jQuery(function() {
 		e.preventDefault();
 		elemnts.animate({scrollTop : 0}, 800);
 	});
-    carousel();
+    // carousel();
 });

@@ -52,8 +52,8 @@
 			</p>
 			<div class="row">
 				<div class="link_panel">
-					<a href="<?php bloginfo('wpurl');?>/galeria" class="white_border_button">Realizacje</a>
-					<a href="<?php bloginfo('url');?>/kontakt" class="white_border_button">Kontakt</a>
+					<a href="<?php  echo esc_url( home_url( '/galeria' ) ); ?>" class="white_border_button">Realizacje</a>
+					<a href="<?php echo esc_url( home_url( '/kontakt' ) ); ?>" class="white_border_button">Kontakt</a>
 				</div>
 			</div>
 		</div>
@@ -69,7 +69,7 @@
 			</p>
 			<div class="row">
 				<div class="link_panel">
-					<a href="<?php bloginfo('url');?>/centrum-ogrodnicze/" class="white_border_button_center">Nasza oferta</a>
+					<a href="<?php echo esc_url( home_url( '/centrum-ogrodnicze' ) ); ?>" class="white_border_button_center">Nasza oferta</a>
 				</div>
 			</div>
 		</div>
@@ -85,8 +85,8 @@
 			</p>
 			<div class="row">
 				<div class="link_panel">
-					<a href="<?php bloginfo('url');?>/ogrody/" class="white_border_button">Nasza oferta</a>
-					<a href="<?php bloginfo('url');?>/kontakt/" class="white_border_button">Kontakt</a>
+					<a href="<?php echo esc_url( home_url( '/ogrody' ) ); ?>" class="white_border_button">Nasza oferta</a>
+					<a href="<?php echo esc_url( home_url( '/kontakt' ) ); ?>" class="white_border_button">Kontakt</a>
 				</div>
 			</div>
 		</div>
@@ -124,7 +124,7 @@
 					<div class="adress_info">
 						<ul>
 							<li>Pon. - Pt.: 09:00 - 18:00</li>
-							<li>Sobota: 10:00 - 14:00</li>
+							<li>Sobota: 9:00 - 14:00</li>
 						</ul>
 					</div>
 				</div>
