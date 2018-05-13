@@ -8,6 +8,10 @@ Strona firmowa Centrum Ogrodniczego Sasanka. Projekt został wykonany w oparciu 
 
 ***
 
+![Wersja 2.0.0](https://img.shields.io/badge/Wersja-1.0.2-green.svg)
+
+* Przejście na ES6 w Gulp 
+
 ![Wersja 1.0.2](https://img.shields.io/badge/Wersja-1.0.2-green.svg)
 
 * Zwiększona kompresja zdjęć na stronie

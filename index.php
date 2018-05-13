@@ -123,7 +123,7 @@
 				<div class="row">
 					<div class="adress_info">
 						<ul>
-							<li>Pon. - Pt.: 10:00 - 18:00</li>
+							<li>Pon. - Pt.: 9:00 - 18:00</li>
 							<li>Sobota: 10:00 - 14:00</li>
 						</ul>
 					</div>
