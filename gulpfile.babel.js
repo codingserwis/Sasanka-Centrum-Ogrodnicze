@@ -11,7 +11,8 @@ const gulp = require('gulp'),
 	babel = require('gulp-babel'),
 	gulpIf = require('gulp-if'),
 	del = require('del'),
-	runSequence = require('run-sequence');
+	runSequence = require('run-sequence'),
+	ftp = require('vinyl-ftp');
 
 // basic dirs in project
 const dirs = {
@@ -54,6 +55,11 @@ const dependencesFiles = [
 	'./style.css',
 	'./screenshot.png'
 ];
+
+const ftpPaths = {
+	prod: `${dirs.prod}/**`,
+	baseProd: `${dirs.prod}`
+}
 
 // browser-sync
 gulp.task('browser-sync', () => {
@@ -112,11 +118,30 @@ gulp.task('clear', () => {
 	return del.sync([delPaths.toDelete, delPaths.dontDelete]);
 });
 
+// copy dependences to prod folder
 gulp.task('dependences', () => {
 	return gulp.src(dependencesFiles)
 		.pipe(gulpIf('*.js', gulp.dest(jsPaths.prod)))
 		.pipe(gulpIf('*.css', gulp.dest(cssPaths.prod)))
 		.pipe(gulpIf('+(style.css|screenshot.png)', gulp.dest(dirs.prod)));
+});
+
+// auto deploy to serwer
+import { ftpConfig as ftpConfig } from './ftp-config';
+import { serverPath as serverPath } from './ftp-config';
+
+gulp.task('upload-ftp', () => {
+
+	let conn = ftp.create(
+		ftpConfig
+	);
+
+	return gulp.src(ftpPaths.prod, { 
+		base: ftpPaths.baseProd, 
+		buffer: false
+	})
+	.pipe(conn.newer(serverPath))
+	.pipe(conn.dest(serverPath));
 });
 
 // watch for files
@@ -135,7 +160,7 @@ gulp.task('start-dev', () => {
 
 // gulp for production
 gulp.task('build', () => {
-	runSequence('clear', 'dependences', 'php', 'sass', 'js', 'img-min', () => {
+	runSequence('clear', 'dependences', 'php', 'sass', 'js', 'img-min', 'upload-ftp', () => {
 		console.log('Project build with succes');
 	});
 });
