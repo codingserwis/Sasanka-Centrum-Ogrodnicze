@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="<?php bloginfo( 'language' ); ?>">
 	<head>
+		<!-- Google Tag Manager -->
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-PKRSBGR');</script>
+		<!-- End Google Tag Manager -->
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="description" content="<?php bloginfo( 'description' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="keywords" content="Sasanka, Sasanka Opole, Centrum Ogrodnicze, Centrum Ogrodnicze Opole, Sklep, Usługi ogrodnicze, Usługi ogrodnicze Opole, Usługi Ogrodncze opolskie, Zakładanie ogrodów, Projektowanie ogrodoów, Pielęgnacja ogrodów, Sklep ogrodniczy, Sklep ogrodniczy opole, Środki ochrony roślin, Systemy nawadniania, Opole, opolskie, Opolszczyzna">
 		<script src="https://use.fontawesome.com/b1f95d1c43.js"></script>
-		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-89931638-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/assets/img/favicons/favicon.ico" />
 		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/favicons/apple-touch-icon.png' );?>">
 		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/favicons/favicon-32x32.png' );?>">
@@ -26,7 +23,11 @@
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<body <?php body_class(); ?>>
+	<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKRSBGR"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 		<header class="header">
 			<div class="row">
 				<div class="top_logo">
