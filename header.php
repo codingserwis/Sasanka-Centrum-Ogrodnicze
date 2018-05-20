@@ -31,9 +31,11 @@
 		<header class="header">
 			<div class="row">
 				<div class="top_logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/sasanka_white_logo.svg' );?>">
-					</a>
+					<h1 class="logo">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/sasanka_white_logo.svg' );?>">
+						</a>
+					</h1>
 				</div>
 				<div class="fast_contact">
 					<ul>
