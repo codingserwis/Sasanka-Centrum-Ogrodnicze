@@ -17,7 +17,7 @@
 							Copyrights: Sasanka <?php the_time('Y'); ?> Wszelkie prawa zastrzeżone. 
 						</p>
 						<p>
-							Projekt i wykonanie: <a href="http://www.codingserwis.pl">codingserwis.pl</a>
+							Projekt i wykonanie: <a href=<?php echo esc_url( 'http://codingserwis.pl/?utm_source=sasanka_page&utm_medium=footer_link&utm_campaign=client_page_link' ); ?>>codingserwis.pl</a>
 						</p>
 					</div>
 				</div>
