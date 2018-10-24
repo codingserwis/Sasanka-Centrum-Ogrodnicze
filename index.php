@@ -139,8 +139,12 @@
 				<div class="row">
 					<div class="adress_info">
 						<ul>
-							<li>Pon. - Pt.: 09:00 - 18:00</li>
-							<li>Sobota: 9:00 - 14:00</li>
+							<?php 
+								$contact_page = get_page_by_title('', 'OBJECT', 'page');
+								$pageId = $contact_page->ID;
+							?>
+							<li>Pon. - Pt.: <?php the_field( 'hours_mon_fr_open', $pageId ); ?> - <?php the_field( 'hours_mon_fr_close', $pageId ); ?></li>
+							<li>Sobota: <?php the_field( 'hours_sat_open', $pageId ); ?> - <?php the_field( 'hours_sat_close', $pageId ); ?></li>
 						</ul>
 					</div>
 				</div>

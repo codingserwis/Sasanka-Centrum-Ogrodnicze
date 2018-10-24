@@ -2,10 +2,19 @@
 /**
  * Template name: Home Page
  * 
- * @version: 1.0
+ * @version: 1.1
  * @since: 1.0
  * 
  */
+
+// get fields from Kontakt page
+	$contact_page = get_page_by_title('Kontakt z Centrum Ogrodniczym Sasanka', 'OBJECT', 'page');
+	$pageId = $contact_page->ID;
+
+	$phone_no = get_field( 'shop_phone', $pageId );
+    $mobile_shop_no = get_field( 'shop_mobile_phone', $pageId );
+    $mobile_service_no = get_field( 'service_mobile_phone', $pageId );
+    $email = get_field( 'shop_email', $pageId );
 
 get_header(); 
 
@@ -132,22 +141,22 @@ get_header();
 				<div class="row">
 					<div class="adress_info">
 						<ul>
-							<li>Sklep: <a href="tel:+48775472400">77 547 24 00</a></li>
-							<li>Sklep: <a href="tel:+48603443522">603 443 522</a></li>
-							<li>Serwis: <a href="tel:+48601533825">601 533 825</a></li>
+						<li>Sklep: <a href="<?php echo esc_url( 'tel:+48' . $tel = str_replace( ' ', '', $phone_no ) ); ?>" ><?php the_field( 'shop_phone', $pageId ); ?></a></li>
+                                <li>Sklep: <a href="<?php echo esc_url( 'tel:+48' . $shop_mob = str_replace( ' ', '', $mobile_shop_no) ); ?>"><?php the_field( 'shop_mobile_phone', $pageId ); ?></a></li>
+                                <li>Usługi: <a href="<?php echo esc_url( 'tel:+48' . $service_mob = str_replace( ' ', '', $mobile_service_no) ); ?>" ><?php the_field( 'service_mobile_phone', $pageId ); ?></a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="row">
 					<div class="adress_info">
-						<a href="mailto:sasankaogrody@wp.pl">sasankaogrody@wp.pl</a>
+					<a href="<?php echo esc_url( 'mailto:' . $email ); ?>"><?php the_field( 'shop_email', $pageId ); ?></a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="adress_info">
 						<ul>
-							<li>Pon. - Pt.: 09:00 - 18:00</li>
-							<li>Sobota: 9:00 - 14:00</li>
+							<li>Pon. - Pt.: <?php the_field( 'hours_mon_fr_open', $pageId ); ?> - <?php the_field( 'hours_mon_fr_close', $pageId ); ?></li>
+							<li>Sobota: <?php the_field( 'hours_sat_open', $pageId ); ?> - <?php the_field( 'hours_sat_close', $pageId ); ?></li>
 						</ul>
 					</div>
 				</div>
