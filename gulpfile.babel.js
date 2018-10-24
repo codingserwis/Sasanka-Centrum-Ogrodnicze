@@ -12,7 +12,8 @@ const gulp = require('gulp'),
 	gulpIf = require('gulp-if'),
 	del = require('del'),
 	runSequence = require('run-sequence'),
-	ftp = require('vinyl-ftp');
+	ftp = require('vinyl-ftp'); 
+	require("babel-register");
 
 // basic dirs in project
 const dirs = {
@@ -160,7 +161,7 @@ gulp.task('start-dev', () => {
 
 // gulp for production
 gulp.task('build', () => {
-	runSequence('clear', 'dependences', 'php', 'sass', 'js', 'img-min', 'upload-ftp', () => {
+	runSequence('clear', 'dependences', 'php', 'sass', 'js', 'img-min', () => {
 		console.log('Project build with succes');
 	});
 });
